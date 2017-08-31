@@ -1,6 +1,18 @@
 <?xml version="1.0" ?>
-<project name="ant-demo" default="hello">
+<project name="ant-property-demo" default="hello">
+	<property name="name" value="Freewind" />
+	<property file="data.properties" />
+
 	<target name="hello">
-		<echo message="Hello ant!" />
+		<echo message="Hello ${name}!" />
+		<echo message="You like: ${like}" />
+		<echo message="Ant properties:" />
+		<echo message="  ${basedir}" />
+		<echo message="  ${ant.file}" />
+		<echo message="  ${ant.version}" />
+		<echo message="  ${ant.project.name}" />
+		<echo message="  ${ant.java.version}" />
 	</target>
+
+
 </project>
